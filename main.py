@@ -7,15 +7,15 @@ def gerarSenha():
         print("2 - Gerar senha segura")
         print("3 - Gerar senha muito segura")
         x = input("Selecione qual senha quer gerar: ")
-
+        
         if x == "1":
             senha = ''.join(random.choices(string.ascii_letters, k=8))
             print(f"Senha gerada: {senha}")
         elif x == "2":
-            print("Opcao 2 selecionada.")
+            senha = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
             print(f"Senha gerada: {senha}")
         elif x == "3":
-            print("Opcao 3 selecionada.")
+            senha = ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=10))
             print(f"Senha gerada: {senha}")
         else:
             print("Opção inválida. Tente novamente.")
